@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8" />
+	<head>
+		<title>tables</title>
+		<meta name="keywords" content="Song Liu, Urban planning, Tongji University">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<script type="text/javascript" src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+	</head>
+	<body>
+		<pre>
+Qc=0.625, Tc=1024.125, Qo2=1.667, Po2=650,
+#Qc:单位面积城市绿地的年固碳量
+#Tc:碳税率
+#Qo2:单位面积城市绿地的O2年释放量
+#P02:工业氧气价格
+
+tree=greenland.conifer_broadleaf['conandbro'], 
+#树类型
+
+R=4, P=1317.3, E=697.4, C=0.2,
+#R:居民用水价格
+#P:年降水量
+#E:年均蒸发量
+#C:径流系数
+
+
+t=0.038, W=0.012, p=0.462, T=600
+#t:单位面积（平方米）绿地降温度数
+#W:单位时间(小时)空调耗电量
+#p:居民电价
+#T:耗电时间
+		</pre>
+		<hr/>
+		<form id="args">
+		<p>
+		<label for="Qc">Qc:</label>
+		<input id="Qc" type="text" name="Qc" value="0.625">
+
+		<label for="Tc">Tc:</label>
+		<input id="Tc" type="text" name="Tc" value="1024.125">
+
+		<label for="Qo2">Qo2:</label>
+		<input id="Qo2" type="text" name="Qo2" value="1.667">
+
+		<label for="Po2">Po2:</label>
+		<input id="Po2" type="text" name="Po2" value="650">
+		</p>
+		<p>
+		<label for="R">R:</label>
+		<input id="R" type="text" name="R" value="4">
+
+		<label for="P">P:</label>
+		<input id="P" type="text" name="P" value="1317.3">
+
+		<label for="E">E:</label>
+		<input id="E" type="text" name="E" value="697.4">
+
+		<label for="C">C:</label>
+		<input id="C" type="text" name="C" value="0.2">
+		</p>
+		<p>
+		<label for="t">t:</label>
+		<input id="t" type="text" name="t" value="0.038">
+
+		<label for="W">W:</label>
+		<input id="W" type="text" name="W" value="0.012">
+
+		<label for="p">p:</label>
+		<input id="p" type="text" name="p" value="0.462">
+
+		<label for="T">T:</label>
+		<input id="T" type="text" name="T" value="600">
+		</p>
+		
+		<p>
+			<label for="tree">tree:</label>
+		<input id="tree" type="text" name="tree" value="conandbro">
+
+		<label for="x1">x1:</label>
+		<input id="x1" type="text" name="x1" value="0.6">
+
+		<label for="x2">x2:</label>
+		<input id="x2" type="text" name="x2" value="0.3">
+
+		<label for="x3">x3:</label>
+		<input id="x3" tyx3e="text" name="x3" value="0.1">
+		</p>
+
+		<p>
+			<label for="y1">y1:</label>
+			<input id="y1" type="teyt" name="y1" value="0.4">
+
+		<label for="y2">y2:</label>
+		<input id="y2" type="teyt" name="y2" value="0.25">
+
+		<label for="y3">y3:</label>
+		<input id="y3" tyy3e="teyt" name="y3" value="0.35">
+		</p>
+		</form>
+		<button onclick="sb2()">Submit</button>
+		<hr/>
+
+		<div id="table-place">
+		</div>
+	</body>
+</html>
