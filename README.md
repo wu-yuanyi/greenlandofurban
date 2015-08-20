@@ -13,8 +13,30 @@ C2: value of ease air pollution
 C3: value of storing and conserving water
 C4: value of adjusting the climate
 
-C1 = (S*Qc*Tc + S*Qo2*Po2) / 10000
+C1 = (S  \*Qc \*Tc + S \* Qo2 \* Po2) / 10000
 S(unit is hm2):the area of greenland in the researched location
-Qc(0.625t/(hm2*a))
+Qc:(0.625t/(hm2 \* a))
+Tc: Carbon tax (1024.125 RMB/t)
+Qo2(1.667 t /(hm2 \* a))
+Po2:price of industrial oxygen [650RMB/t]
+
+C2 = S \* Q污染物 \* Ft / 10000
+S:
+Q:
+Ft:
+
+C3 = R\*（P-E-C \*P）\*S/1000
+S:
+R:
+P:
+E:
+C:
+
+C4 = S \* T \* W \* p \* t
+S:
+T:
+W:
+P:
+t:
 
 
