@@ -5,7 +5,7 @@
 - B1(ecological efficiency evaluation moudle), 
 - B2(economic effiency evaluation moudle), 
 - B3(social effectiveness evaluation moudle), 
-- B4(comprehensive efficiency evaluation moudle)
+- B4(comprehensive efficiency evaluation moudle).
 
 **Urban Green Space comprehensive efficiency = X1 * (Urban Green Space ecological efficiency) + X2 * (Urban Green Space economical efficiency) + X3 * (Urban Green Space social efficiency)**
 
@@ -15,43 +15,48 @@
 ##ecological efficiency evaluation moudle##
 ###B1 = C1 + C2 + C3###
 
-- B1: value of urban green space ecological efficiency
-- C1: value of maintaining carbon and oxygen balance
-- C2: value of ease air pollution
-- C3: value of storing and conserving water
-- C4: value of adjusting the climate
+- B1: value of urban green space ecological efficiency.
+- C1: value of maintaining carbon and oxygen balance.
+- C2: value of ease air pollution.
+- C3: value of storing and conserving water.
+- C4: value of adjusting the climate.
 
 
 ###C1 = ( S  * Qc * Tc + S * Qo2 * Po2 ) / 10000###
 
 - S: the area of greenland in the researched location, unit is m^2.
 - Qc: sequestration of unit area of greenland per year, default value is 0.625t/hm^2.
-- Tc: Carbon tax, default value is 1024.125 RMB/t
-- Qo2: oxygen release of unit area of greenland per year, default value is 1.667 t/hm^2
-- Po2: price of industrial oxygen, default value is 650RMB/t
+- Tc: Carbon tax, default value is 1024.125 RMB/t.
+- Qo2: oxygen release of unit area of greenland per year, default value is 1.667 t/hm^2.
+- Po2: price of industrial oxygen, default value is 650RMB/t.
 
 ###C2 = S * Q * Ft / 10000###
 - S: the area of greenland in the researched location, unit is m^2.
-- Q: unit area of greenland's ability of absorbing polluants per year,
-- Ft: fee of  pollution administration
+- Q: unit area of greenland's ability of absorbing polluants per year.
+- Ft: fee of  pollution administration.
 
 || *Community types* || *ability of absorb SO2(t/hm^2)* || *ability of absorb NOx*(t/hm^2)|| *ability of dust detention(t/hm^2)* ||
 || *coniferous forest* || *0.018*|| *0.18* || *33.2* ||
 || *Mixed conifer and broadleaf* || *0.152* || *0.263* || *21.65* ||
 || *broadleaf forest type* || *0.087* || *0.345* || *10.11* ||
 
+|| *polluants* || *fee of administration(RMB/t)* ||
+|| *SO2* || *600* ||
+|| *NOx* || *420* ||
+|| *dust* || *170* ||
+
 ###C3 = R * ( P - E - C * P ) * S / 1000###
-- S:
-- R:
-- P:
-- E:
-- C:
+- S: the area of greenland in the researched location, unit is m^2.
+- R: the price of residential water， default value is 4RMB/t.
+- P: annual rainfall, default value is 1317.3mm.
+- E: annual evaporation， default value is 697.44mm.
+- C: runoff coefficient, default value is 0.2.
 
 ###C4 = S * T * W * p * t###
-- S:
-- T:
-- W:
-- P:
-- t:
+- S: the area of greenland in the researched location, unit is m^2.
+- T: cooling degree of unit area of greenland, default value is 0.038℃/ m2
+- W: air-conditioning power consumption per hour，default value is 0.012 KWh
+- P: residential electricity prices, default value is 0.462RMB/KWh
+- t: averaged consumption time of air-condition per year
 
 
