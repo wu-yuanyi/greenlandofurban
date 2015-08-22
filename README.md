@@ -24,16 +24,21 @@
 
 ###C1 = ( S  * Qc * Tc + S * Qo2 * Po2 ) / 10000###
 
-- S(unit is hm2):the area of greenland in the researched location
-- Qc:(0.625t/(hm2 \* a))
-- Tc: Carbon tax (1024.125 RMB/t)
-- Qo2(1.667 t /(hm2 \* a))
-- Po2:price of industrial oxygen [650RMB/t]
+- S: the area of greenland in the researched location, unit is m^2.
+- Qc: sequestration of unit area of greenland per year, default value is 0.625t/hm^2.
+- Tc: Carbon tax, default value is 1024.125 RMB/t
+- Qo2: oxygen release of unit area of greenland per year, default value is 1.667 t/hm^2
+- Po2: price of industrial oxygen, default value is 650RMB/t
 
 ###C2 = S * Q * Ft / 10000###
-- S:
-- Q:
-- Ft:
+- S: the area of greenland in the researched location, unit is m^2.
+- Q: unit area of greenland's ability of absorbing polluants per year,
+- Ft: fee of  pollution administration
+
+|| *Community types* || *ability of absorb SO2(t/hm^2)* || *ability of absorb NOx*(t/hm^2)|| *ability of dust detention(t/hm^2)* ||
+|| *coniferous forest* || *0.018*|| *0.18* || *33.2* ||
+|| *Mixed conifer and broadleaf* || *0.152* || *0.263* || *21.65* ||
+|| *broadleaf forest type* || *0.087* || *0.345* || *10.11* ||
 
 ###C3 = R * ( P - E - C * P ) * S / 1000###
 - S:
