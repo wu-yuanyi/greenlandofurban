@@ -1,5 +1,5 @@
 #introduction#
-1. This software is applied to the integrated effectiveness evaluation of greenland of built-up area
+1. This software is applied to the integrated effectiveness evaluation of green of built-up area
 2. Evaluation put the administrative unit as the basic unit.
 3. The software consists of four modules:
 - B1(ecological efficiency evaluation moudle), 
@@ -22,17 +22,17 @@
 - C4: value of adjusting the climate.
 
 
-###C1 = ( S  * Qc * Tc + S * Qo2 * Po2 ) / 10000###
+####C1 = ( S  * Qc * Tc + S * Qo2 * Po2 ) / 10000####
 
-- S: the area of greenland in the researched location, unit is m^2.
-- Qc: sequestration of unit area of greenland per year, default value is 0.625t/hm^2.
+- S: the area of green in the researched location, unit is m^2.
+- Qc: sequestration of unit area of green per year, default value is 0.625t/hm^2.
 - Tc: Carbon tax, default value is 1024.125 RMB/t.
-- Qo2: oxygen release of unit area of greenland per year, default value is 1.667 t/hm^2.
+- Qo2: oxygen release of unit area of green per year, default value is 1.667 t/hm^2.
 - Po2: price of industrial oxygen, default value is 650RMB/t.
 
-###C2 = S * Q * Ft / 10000###
-- S: the area of greenland in the researched location, unit is m^2.
-- Q: unit area of greenland's ability of absorbing polluants per year.
+####C2 = S * Q * Ft / 10000####
+- S: the area of green in the researched location, unit is m^2.
+- Q: unit area of green's ability of absorbing polluants per year.
 - Ft: fee of  pollution administration.
 
 || *Community types* || *ability of absorb SO2(t/hm^2)* || *ability of absorb NOx*(t/hm^2)|| *ability of dust detention(t/hm^2)* ||
@@ -45,18 +45,48 @@
 || *NOx* || *420* ||
 || *dust* || *170* ||
 
-###C3 = R * ( P - E - C * P ) * S / 1000###
-- S: the area of greenland in the researched location, unit is m^2.
+####C3 = R * ( P - E - C * P ) * S / 1000####
+- S: the area of green in the researched location, unit is m^2.
 - R: the price of residential water， default value is 4RMB/t.
 - P: annual rainfall, default value is 1317.3mm.
 - E: annual evaporation， default value is 697.44mm.
 - C: runoff coefficient, default value is 0.2.
 
-###C4 = S * T * W * p * t###
-- S: the area of greenland in the researched location, unit is m^2.
-- T: cooling degree of unit area of greenland, default value is 0.038℃/ m2
+####C4 = S * T * W * p * t####
+- S: the area of green in the researched location, unit is m^2.
+- T: cooling degree of unit area of green, default value is 0.038℃/ m2
 - W: air-conditioning power consumption per hour，default value is 0.012 KWh
 - P: residential electricity prices, default value is 0.462RMB/KWh
 - t: averaged consumption time of air-condition per year
 
 
+***
+
+##economic effiency evaluation moudle##
+
+###B2 = X1 * D1 + X2 * D2 + X3 * D3###
+*X1, X2, X3 are weights. You can set them by yourself*
+
+- D1: value of distance from green to park
+
+####D1 = -0.054 * ∑ { ( Ci - C ) / C }####
+
+*Ci is the shortest distance from district to park*
+
+*C is the averaged distance from district to park*
+
+- D2: the evaluation value of green's coverage
+
+####D2 = 0.041 * ∑ { ( Li - L ) / L }####
+
+*Li is thr evaluation value of green's coverage of district*
+
+*L is the averaged evaluation value of grennland's coverage of area*
+
+
+- D3: the evaluation value of green's scenery
+
+####D3 = 0.047 * ∑ { ( Vi - V ) / V }####
+
+*Vi is the evaluation value of green's scenery*
+*V is the averaged evaluation value of green's scenery*
