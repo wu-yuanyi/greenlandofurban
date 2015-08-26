@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" lang="zh">
+<meta charset="utf-8" />
+<head>
+	<title>help</title>
+	<meta name="keywords" content="Song Liu, Urban planning, Tongji University">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<link rel="stylesheet" href="./dist/css/bootstrap.css">
+	<script type="text/javascript" src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+<style>.title{text-align:center}</style>
+</head>
+
+<body>
+<div class="container theme-showcase" role="main">		
+	
+	<div class="title">
+		<header>
+			<h1>高密度城市空间绿地生态效能评价分析</h1>
+		</header>
+	
+		<hr>
+	
+		<nav>
+			<div class="col-sm-5">
+				<a class="btn btn-success btn-lg" href="./introduction.html">介绍</a>
+			</div>
+			
+			<div class="col-sm-2">
+				<a class="btn btn-warning btn-lg" href="./help.html">帮助</a>
+			</div>
+			
+			<div>
+				<a class="btn btn-danger btn-lg" href="./analysis.html">分析</a>
+			</div>
+		</nav>
+	</div>
+	
+	<hr>
+	
+	<pre>
+  程序语言：
+  本程序的核心部分是基于python语言而写的，python的版本是3.4。界面的实现利用了html5+CSS3来达到跨平台的目的。用户可以以网页的形式，来获得计算结果而不需要安装其他程序。
+  
+  
+  
+  输入文件、输出文件的内容要求：
+  四个输入文件：
+  (1)base.csv有4栏：
+  地区名称,人口（人）,面积（km2）,人口密度（万人/km2）
+  
+  (2)greenland.csv有3栏,第一栏可以省略：
+  OBJECTID,地区名称,绿地面积（m2）
+  
+  (3)economy.csv有5栏，覆盖率要求是百分数:
+  子地区名称,子地区绿化覆盖率,最近公园距离（米）,景观视线评价,所属地区
+  
+  (4)society.csv有4栏,第一栏可以省略：
+  Shape_Area,地区名称,公园服务面积（平方公里）,所属社区
+
+
+
+  输入文件、输出文件的格式要求：
+    输入文件要求是csv格式的文件，编码格式为UTF-8无BOM编码格式。
+    CSV是一种通用的、相对简单的文件格式，被用户、商业和科学广泛应用。几乎所有的软件都能打开csv格式的文件，如Excel等。
+    UTF-8（8-bit Unicode Transformation Format）是一种针对Unicode的可变长度字符编码，又称万国码。
+    如何将Windows下的Excel转为UTF-8无BOM编码格式的CSV文件，推荐：
+	1.在Excle中，选择文件->另存为->保存类型->CSV(逗号分隔)
+	2.安装notepad++，本文件夹下install文件夹中已经下载好的notepad++V6.8
+	3.打开csv文件，格式(M)->转为UTF-8无BOM编码格式
+	4.保存文件即可
+	
+	输出文件：
+	可直接用Excel打开
+
+
+
+  运行环境：
+  本程序可以在多种操作系统上运行。
+  对于Windows系统，如Windows7，Windows8，Windows8.1，可进行如下步骤：
+	方法一：
+	1.安装python运行环境
+	  1.1去官网下载安装包，或者本文件夹下install文件夹中已经下载好的
+	    python-3.4.3.amd64是64位系统的
+	    python-3.4.3是32位系统的
+	  1.2双击安装文件即可安装完毕
+	2.运行本程序的服务器
+	  2.1双击文件夹下的server.py，出现名为“py.exe”的命令框
+	  2.2程序运行时请勿关闭，关闭命令框可按快捷键[Ctrl+C]
+	3.在网页上获取运算结果
+	  3.1在网页的任何页面点击“分析”按钮进入相应界面
+	  3.2在输入框中填写你想要设置的数值或采用默认值
+	  3.3点击“提交按钮，获取运算结果”
+
+	方法二：
+	1.安装python运行环境
+	  1.1去官网下载安装包，或者本文件夹下install文件夹中已经下载好的
+	    python-3.4.3.amd64是64位系统的
+	    python-3.4.3是32位系统的
+	  1.2双击安装文件即可安装完毕
+	2.直接获取保存运算结果的csv文件
+	  2.1双击total.py文件即可获得csv格式的结果文件result.csv
+  
+  
+  对于Linux系统，如Ubuntu 14.04，可进行如下步骤：
+	方法一：
+	1.安装python运行环境
+	  1.1打开终端（terminal），可按快捷键[Ctrl+Alt+T]
+	  1.2在终端中输入命令：sudo apt-get install python3.4
+	2.运行本程序的服务器
+	  2.1打开终端（terminal），将在终端中输入命令如下
+	  2.2进入到本文件夹（如在桌面）：cd ~/Desktop/Urban
+	  2.3启动本程序的服务器：python3 server.py
+	3.在网页上获取运算结果
+	  3.1在网页的任何页面点击“分析”按钮进入相应界面
+	  3.2在输入框中填写你想要设置的数值或采用默认值
+	  3.3点击“提交按钮，获取运算结果”
+	
+	方法二：
+	1.安装python运行环境
+	  1.1打开终端（terminal），可按快捷键[Ctrl+Alt+T]
+	  1.2在终端中输入命令：sudo apt-get install python3.4
+	2.直接获取保存运算结果的csv文件
+	  2.1打开终端（terminal），将在终端中输入命令如下
+	  2.2进入到本文件夹（如在桌面）：cd ~/Desktop/Urban
+	  2.3获得csv格式的结果文件result.csv：python3 total.py
+	</pre>
+
+    <footer>
+    <hr style="clear: both;"/>
+    <div style="float:left">
+    Last modified: 2015-08-04.
+    </div>
+    <div style="float:right">
+    <a href="http://validator.w3.org/check/referer">
+    <img src="http://shtech.org/image/html5-40.png" alt="Valid HTML 5!" />
+    </a>
+    </div>
+    </footer>
+	
+</div>
+</body>
+</html>
