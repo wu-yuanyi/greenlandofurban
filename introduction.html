@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" lang="zh">
+<meta charset="utf-8" />
+<head>
+	<title>introduction</title>
+	<meta name="keywords" content="Song Liu, Urban planning, Tongji University">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	<link rel="stylesheet" href="./dist/css/bootstrap.css">
+	<script type="text/javascript" src="http://s1.bdstatic.com/r/www/cache/static/jquery/jquery-1.10.2.min_f2fb5194.js"></script>
+	<script type="text/javascript" src="./main.js"></script>
+<style>.title{text-align:center}</style>
+</head>
+
+<body>
+<div class="container theme-showcase" role="main">		
+	
+	<div class="title">
+		<header>
+			<h1>高密度城市空间绿地生态效能评价分析</h1>
+		</header>
+	
+		<hr>
+	
+		<nav>
+			<div class="col-sm-5">
+				<a class="btn btn-success btn-lg" href="./introduction.html">介绍</a>
+			</div>
+			
+			<div class="col-sm-2">
+				<a class="btn btn-warning btn-lg" href="./help.html">帮助</a>
+			</div>
+			
+			<div>
+				<a class="btn btn-danger btn-lg" href="./analysis.html">分析</a>
+			</div>
+		</nav>
+	</div>
+	
+	<hr>
+	
+<pre>
+1 本软件适用于建成区绿地的综合效能评价。
+
+2 评价以行政单元（如行政分区、街道等）为基本单元。
+
+3 本软件由四个模块组成:
+  (1)生态效能评价模块B1
+  (2)经济效能评价模块B2
+  (3)社会效能评价模块B3
+  (4)综合效能评价模块A
+  城市绿地综合效能=Y1*城市绿地生态效能+Y2*城市绿地经济效能+Y3*城市绿地社会效能。其中，Y1、Y2、Y3为三个变量的权重，一般由AHP法产生，可由用户输入，默认值为0.4、0.25、0.35  
+
+4 分析结果包括生态效能、社会效能和经济效能评价、综合效能评价四个数据库，由于评价量纲不同，在计算综合效能前对生态效能、社会效能和经济效能评价值进行了归一化处理。即Z=(Zi-Zmin)/(Zmax-Zmin)(其中，Z为归一化后的新数据，Zi、Zmax、Zmin为去量纲前的初始评价结果和相应的最大最小值)
+
+5 本评价分析结果是相对的，可用于分析评价单元间的比较。
+  </pre>
+
+<hr>
+
+	<div class="panel-danger">
+		<div class="panel-heading">
+            <h3 class="panel-title">
+            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+            生态效能评价模块
+            </h3>
+        </div>
+
+		<div class="panel-warning">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+				城市绿地生态效能B1=维持碳氧平衡价值C1+缓解空气污染C2+蓄水保水C3+调节气候C4（单位：元）
+			</div>
+			
+        
+			<div class="panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+					C1维持碳氧平衡价值= （S*QC *TC+ S*QO2*PO2）/10000(注：将平方米转换为公顷)）
+				</div>
+					
+				<div class="panel-body">
+					S为研究区域内绿地面积(hm<sup>2</sup>)<br>
+
+					Qc为单位面积城市绿地的年固碳量，默认值为0.625t /（hm<sup>2</sup> *a）<br>
+
+					Tc为碳税率，默认值为1024.125元/t<br>
+
+					QO2为单位面积城市绿地的O2年释放量默认值为1.667 t /（hm<sup>2</sup> *a）<br>
+
+					PO2为工业氧气价格，默认值为650元/t<br>
+				</div>
+			</div>
+
+			<div class="panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+					C2缓解空气污染= ∑(S *Q污染物i*Fti)/10000(注：将平方米转换为公顷)
+				</div>
+					
+				<div class="panel-body">
+					S为研究区域内城市绿地面积(m<sup>2</sup>)<br>
+					
+					Q污染物为单位面积城市绿地对污染物的年吸收能力（表1）<br>
+					
+					Ft为工业污染物的治理费用（表2）<br>
+					<table class="table">
+						<tr><th colspan="4" class="success">表1 城市不同类型绿地吸收空气污染物能力</th></tr>
+						
+						<tr>
+							<td class="success">群落类型</td>
+							<td class="success">吸收SO<sub>2</sub>能力（t/hm<sup>2</sup>）</td>
+							<td class="success">吸收NO<sub>x</sub>能力（t/hm<sup>2</sup>）</td>
+							<td class="success">滞尘能力（t/hm<sup>2</sup>）</td>
+						</tr>
+						
+						<tr>
+							<td class="success">针叶型(conifer)</td>
+							<td class="success">0.118</td>
+							<td class="success">0.18</td>
+							<td class="success">33.2</td>
+						</tr>
+						
+						<tr>
+							<td class="success">针阔混交型(conandbro)</td>
+							<td class="success">0.152</td>
+							<td class="success">0.263</td>
+							<td class="success">21.65</td>
+						</tr>
+						
+						<tr>
+							<td class="success">阔叶型(broadlef)</td>
+							<td class="success">0.087</td>
+							<td class="success">0.345</td>
+							<td class="success">10.11</td>
+						</tr>
+					</table>
+
+					<table class="table">
+						<tr><th colspan="2" class="success">表2 不同污染物治理费用</th></tr>
+						
+						<tr>
+							<td class="success">污染物</td>
+							<td class="success">治理费用（元/t）</td>
+						</tr>
+
+						<tr>
+							<td class="success">SO<sub>2</sub</td>
+							<td class="success">600</td>
+						</tr>
+					
+						<tr>
+							<td class="success">NO<sub>x</sub</td>
+							<td class="success">420</td>
+						</tr>
+						
+						<tr>
+							<td class="success">粉尘</td>
+							<td class="success">170</td>
+						</tr>							
+					</table>
+				</div>
+			</div>
+				
+			<div class="panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+					C3蓄水保水=R*(P-E-C*P)*S/1000
+				</div>
+					
+				<div class="panel-body">
+					R为居民用水价格（元/m<sup>3</sup>）<br>
+					
+					P为年降水量，默认值1317.3mm<br>
+					
+					E年均蒸发量，默认值697.4 mm<br>
+					
+					C为径流系数，默认值0.2<br>
+
+					S为绿地面积(m<sup>2</sup>)<br>
+				</div>
+			</div>
+				
+				
+			<div class="panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+					C4调节气候=S*t*W*p*T
+				</div>
+					
+				<div class="panel-body">
+					S为绿地面积(m<sup>2</sup>)，
+
+					t为单位面积（平方米）绿地降温度数，默认数值为0.038℃/ m<sup>2</sup>><br>
+
+					W为单位时间(小时)空调耗电量,默认数据为0.012度/h<br>
+
+					p为居民电价，默认值0.462元/度<br>
+
+					T为耗电时间默认为600h<br>
+				</div>
+			</div>
+				
+				
+		</div>
+	</div>
+
+	<hr>
+
+ 	<div class="panel-danger">
+		<div class="panel-heading">
+            <h3 class="panel-title">
+            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+            经济效能评价模块
+            </h3>
+        </div>
+			
+		<div class="panel-warning">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+				城市绿地生态效能= X1*公园绿地价值+ X2*绿化覆盖率评价值+ X3*景观视线评价值<br>
+				注意：三项评价公式中的系数是本研究根据上海市虹口区绿地社会价值影响因素的研究提出的
+			</div>
+			
+			<div class="panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+					公园绿地价值=-0.054*∑{(Ci-C)/C}
+				</div>
+					
+				<div class="panel-body">
+					Ci为居住区距最近公园的距离<br>
+					
+					C为研究区域居住区距公园距离的平均值<br>
+				</div>
+			</div>
+			
+			<div class="panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+					（居住区）绿化覆盖率评价值=0.041*∑{(Li-L)/L}
+				</div>
+					
+				<div class="panel-body">
+					Li为居住区绿化覆盖率<br>
+					
+					L取25%，为居住区最低绿化覆盖率<br>
+				</div>
+			</div>
+				
+			<div class="panel-info">
+				<div class="panel-heading">
+					<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+					景观视线评价值=0.047*∑{(Vi-V)/V}
+				</div>
+					
+				<div class="panel-body">
+					Vi为绿地景观视线评价值<br>
+
+					V为研究区景观视线的平均值<br>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<hr>	
+ 	
+	<div class="panel-danger">
+		<div class="panel-heading">
+            <h3 class="panel-title">
+            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+            社会效能评价模块
+            </h3>
+        </div>
+			
+		<div class="panel-warning">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+				城市绿地社会效能=绿地服务总面积SA/总面积A
+			</div>
+			
+		</div>
+	</div>
+
+
+	
+	<footer>
+    <hr style="clear: both;"/>
+    <div style="float:left">
+
+    Last modified: 2015-08-04.
+    </div>
+    <div style="float:right">
+    <a href="http://validator.w3.org/check/referer">
+    <img src="http://shtech.org/image/html5-40.png" alt="Valid HTML 5!" />
+    </a>
+    </div>
+    </footer>
+	
+
+</div>
+</body>
+</html>
